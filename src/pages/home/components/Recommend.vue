@@ -2,7 +2,7 @@
   <div>
     <div class="title">推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.key">
+      <li class="item border-bottom" v-for="item of list" :key="item.key">
         <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,39 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1604/1e/1e75f8e1af9fe81f90.img.jpg_200x200_0ded2b1b.jpg',
-          title: '世界花卉大观园',
-          desc: '浪漫大连首站，浪漫的海洋主题乐园'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1604/1e/1e75f8e1af9fe81f90.img.jpg_200x200_0ded2b1b.jpg',
-          title: '世界花卉大观园',
-          desc: '浪漫大连首站，浪漫的海洋主题乐园'
-        },
-        {
-          id: '0003',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1604/1e/1e75f8e1af9fe81f90.img.jpg_200x200_0ded2b1b.jpg',
-          title: '世界花卉大观园',
-          desc: '浪漫大连首站，浪漫的海洋主题乐园'
-        },
-        {
-          id: '0004',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1604/1e/1e75f8e1af9fe81f90.img.jpg_200x200_0ded2b1b.jpg',
-          title: '世界花卉大观园',
-          desc: '浪漫大连首站，浪漫的海洋主题乐园'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
